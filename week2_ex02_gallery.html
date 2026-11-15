@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href=style.css>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PRODUCT PAGE</title>
+    </head>
+    <body>
+        <h1>WELCOME TO GALLERY THEATER!</h1>
+        <div class="gallery-container">
+            <!-- Hidden radio buttons to track which filter is active -->
+             <input type="radio" name="filter" id="all" checked>
+             <input type="radio" name="filter" id="landscapes">
+             <input type="radio" name="filter" id="portraits">
+             <input type="radio" name="filter" id="architecture">
+
+             <!-- Flexbox filter buttons -->
+             <div class="filter-buttons">
+                <label for="all">All</label>
+                <label for="landscapes">Landscapes</label>
+                <label for="portraits">Portraits</label>
+                <label for="architecture">Architecture</label>
+             </div>
+
+             <!-- Main Grid Container holding all cards -->
+             <div class="gallery-grid">
+
+                <!-- Card 1: Portrait -->
+                <article class="card portraits">
+                    <img src="https://art-online.co.za/wp-content/uploads/2024/02/Karo-Man-002-768x928.jpg" alt="portraits">
+                    <div class="info">
+                        <h1 class="Title">Karo-Man</h1>
+                        <p class="Description">This striking close-up portrait captures the rich cultural heritage and quiet dignity of the Karo people of Ethiopia's Omo Valley.</p>
+                    </div>
+                </article>
+
+                <!-- Card 2: Architecture -->
+                <article class="card architecture">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmNdoNRHfSMITI-3EY6WjgiRxijE5HrWULal0TwbAxXg&s=10" alt="architecture">
+                    <div class="info">
+                        <h1 class="Title">Experience art through architecture</h1>
+                        <p class="Description">A massive, darkened industrial hall—formerly a 19th-century iron foundry.</p>
+                    </div>
+                </article>
+
+                <!-- Card 3: Landscapes -->
+                <article class="card landscapes">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_2c_o3Taj3uIceWe2zKWeZeuW0-Rri6NqPXyAQ8aMjQ&s=10" alt="landscapes">
+                    <div class="info">
+                        <h1 class="Title">Connect with Nature</h1>
+                        <p class="Description">The image is a pastoral landscape painting featuring a sunlit meadow, a winding stream, and distant blue mountains.</p>
+                    </div>
+                </article>
+
+                <!-- Card 4: Landscapes -->
+                <article class="card landscapes">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAixIp06ki1Vsu1Xl-odWFCnFjbp3q-FB1_2wY3jtVjg&s=10" alt="landscape">
+                    <div class="info">
+                        <h1 class="Title">Museum of History and Culture</h1>
+                        <p class="Description">The room features deep slate-blue walls paired with crisp white wainscoting.</p>
+                    </div>
+                </article>
+
+                <!-- Card 5: Portraits -->
+                <article class="card portraits">
+                    <img src="https://assets.straussart.co.za/t_image/items/1016/101652/george-milwa-mnyaluza-pemba-xhosa-woman-t29m0n.jpg" alt="portraits">
+                    <div class="info">
+                        <h1 class="Title">The Xhosa Woman</h1>
+                        <p class="Description">A portrait of a Xhosa woman wearing traditional attire, including a green headdress.</p>
+                    </div>
+                </article>
+
+                <!-- Card 6: Architecture -->
+                <article class="card architecture">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW1Hhdy9sBdB2O_rWTbpVCDITy5_TGhLdSllJp8XcjGIpsSveCnc-eZoI&s=10" alt="architecture">
+                    <div class="info">
+                        <h1 class="Title">Roth-Architecture</h1>
+                        <p class="Description">The photo captures a wide interior view of the IK LAB art gallery in Tulum, Mexico.</p>
+                    </div>
+                </article>
+
+                <!-- Card 7: Landscapes -->
+                <article class="card landscapes">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPnSnNbPllOZkKGT2yguPSnJcKxR3_Laa4EGy_6cNIZA&s=10" alt="landscapes">
+                    <div class="info">
+                        <h1 class="Title">landscape and Culture</h1>
+                        <p class="Description">This monumentally scaled, multi-material wall relief acts as a self-portrait.</p>
+                    </div>
+                </article>
+
+                <!-- Card 8: Portraits -->
+                <article class="card portraits">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjyFjs7LsgJg2HEsgPu7LSWL3uj-0Tqz5E9LP-m36Sj5sPNI5dTLPYnI&s=10" alt="portrait">
+                    <div class="info">
+                        <h1 class="Title">The prominent teal bronze sculpture</h1>
+                        <p class="Description">The tall, teal-patinated bronze figure in the foreground is Ariana by Robin Kutinyu.</p>
+                    </div>
+                </article>
+
+                <!-- Card 9: Portraits -->
+                <article class="card portraits">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2JAl7t1bVNBqxgFE8HktnWjg0KLzBW-uA1J0s0Ouuwg&s=10" alt="portraits">
+                    <div class="info">
+                        <h1 class="Title">Mona Lisa</h1>
+                        <p class="Description">The Mona Lisa is a half-length portrait painting featuring a seated woman.</p>
+                    </div>
+                </article>
+
+                <!-- Card 10: Landscapes -->
+                <article class="card landscapes">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKPvpucrogDQ0nUzWBmoNe4daTRkRd5a-l3EelAkcBDW9rS0LKJJAfIIk&s=10" alt="landscapes">
+                    <div class="info">
+                        <h1 class="Title">Galeria Adriana Varejão</h1>
+                        <p class="Description">A stark white concrete box suspended over a large artificial reflecting pool.</p>
+                    </div>
+                </article>
+
+                <!-- Card 11: Architecture -->
+                <article class="card architecture">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/guggenheim-bilbao-gallery-spain-1616178499.jpg?resize=980:*" alt="architecture">
+                    <div class="info">
+                        <h1 class="Title">World Best Museum</h1>
+                        <p class="Description">Organic Form: The building's flowing, curving volumes are randomly arranged.</p>
+                    </div>
+                </article>
+
+                <!-- Card 12: Architecture -->
+                <article class="card architecture">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMUONS5345qgM6nU0w__R7TsH95U8fPNsTUNWu7Z9XPilPF-VkKdjt1mA&s=10" alt="architecture">
+                    <div class="info">
+                        <h1 class="title">Jim Lambie: Zobop</h1>
+                        <p class="Description">Vibrant strips of multicolored industrial vinyl tape transform the neoclassical rotunda.</p>
+                    </div>
+                </article>
+
+             </div> <!-- End of gallery-grid -->
+        </div> <!-- End of gallery-container -->
+    </body>
+</html>

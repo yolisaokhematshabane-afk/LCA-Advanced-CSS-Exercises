@@ -64,3 +64,66 @@ button:hover {
         max-width: 300px;
     }
 }
+/* Flexbox layout for filter buttons */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+.filter-buttons label:hover {
+    background-color: #d0d0d0;
+}
+/* Highlight the active filter button */
+#all:checked ~ .filter-buttons label[for="all"],
+#landscapes:checked ~ .filter-buttons label[for="landscapes"],
+#portraits:checked ~ .filter-buttons label[for="portraits"],
+#architecture:checked ~ .filter-buttons label[for="architecture"] {
+    background-color: #007bff;
+    color: black;
+
+/* Grid layout for main gallery (Desktop: 4 columns) */
+.gallery-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Grid layout for individual card contents */
+.card {
+    display: grid;
+    grid-template-rows: 200px auto; /* Image area + content area */
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Desktop: 4 columns */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns
+    }
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .gallery-grid  {
+    grid-template-columns
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pure CSS Filtering Magic with smooth transition */
+#landscapes:checked ~ .gallery-grid .card:not(.landscape),
+#portraits:checked ~ .gallery-grid .card:not(.portrait),
+#architecture:checked ~ .gallery-grid .card:not(.architecture) {
+    display: none;
+}
+
