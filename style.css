@@ -1,129 +1,164 @@
-img{
-    width: 300px;
-}
-body{
-    text-align: center;
-}
-product-container {
-    display: flex;flex-wrap: wrap; justify-content: center;gap: 20px; max-width: 1000px; margin: 0 auto;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-/*card styling */
-.product-card {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 15px;
-    background-color: white;
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: -moz-linear-gradient(rgba(12,3,51,0.3), rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.background-video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    justify-content: space-between;
+}
+
+ nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+ nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+ }
+ .product-card {
+    width: 300px;
+    min-height: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
+ }
+
+.product-list {
+    flex-direction: column;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+    align-items: stretch;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .product-card img {
     width: 100%;
-    height: auto;
-    border-radius: 4px;
+    height: 240px;
+    object-fit: contain;
 }
 
-/*. Button Styling*/
-button{
-    background-color: #4CAF50;
+.product-info {
+    padding: 16px;
+}
+
+.product-price {
+    font-weight: bold;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #f3f3f3;       /* Light grey track */
+  border-top: 6px solid #3498db;   /* Colored spinning arc */
+  border-radius: 50%;              /* Turns the square into a circle */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+button {
+    background-color: #3498db;
     color: white;
+    border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    boarder: none;
     cursor: pointer;
-    /* Transition for smooth hover effect */
-    transition: background-color 0.3s ease;
-}
-
-/*Hover effect: Darken background */
-button:hover {
-    background-color: #3e8e41;
-}
-
-/* Responsive Layout (Media Queries) */
-/* Desktop: 3 cards per row */
-@media (min-width: 769px) {
-    .product-card{
-        flex: 0 0 calc(33.333% - 20px);
-        max-width: 300px;
-    }
-}
-
-/* Tablet:max-width 768px -> 2 cards per row */
-@media (max-width: 768px) {
-    .product .product-card {
-        flex: 0 0 calc(50% - 20px);
-        max-width: 300px;
-    }
-}
-
-/*mobile: max-width 480px -> 1 card per row */
-@media (max-width: 480px) {
-    .product-card {
-        flex: 0 0 100%;
-        max-width: 300px;
-    }
-}
-/* Flexbox layout for filter buttons */
-.filter-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-
-.filter-buttons label:hover {
-    background-color: #d0d0d0;
-}
-/* Highlight the active filter button */
-#all:checked ~ .filter-buttons label[for="all"],
-#landscapes:checked ~ .filter-buttons label[for="landscapes"],
-#portraits:checked ~ .filter-buttons label[for="portraits"],
-#architecture:checked ~ .filter-buttons label[for="architecture"] {
-    background-color: #007bff;
-    color: black;
-
-/* Grid layout for main gallery (Desktop: 4 columns) */
-.gallery-container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-/* Grid layout for individual card contents */
-.card {
-    display: grid;
-    grid-template-rows: 200px auto; /* Image area + content area */
-    background: #fff;
+    padding: 14px 28px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #0066ff;
+    text-decoration: none;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Desktop: 4 columns */
-@media (max-width: 1024px) {
-    .gallery-grid {
-        grid-template-columns
+    box-shadow: 0 0 0 0 rgba(0, 102, 255, 0.7);
+    animation: pulse 2s infinite;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 }
-
-/* Tablet: 2 columns */
-@media (max-width: 1024px) {
-  .gallery-grid  {
-    grid-template-columns
-  }
+.button:hover {
+    background-color: yellow;
+    transform: translateY(-2px);
+    animation: none; /* Stop the pulse animation on hover */
 }
-
-/* Mobile: 1 column */
-@media (max-width: 600px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
+body p {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
 }
-
-/* Pure CSS Filtering Magic with smooth transition */
-#landscapes:checked ~ .gallery-grid .card:not(.landscape),
-#portraits:checked ~ .gallery-grid .card:not(.portrait),
-#architecture:checked ~ .gallery-grid .card:not(.architecture) {
-    display: none;
-}
-
